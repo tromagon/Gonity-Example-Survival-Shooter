@@ -2,21 +2,21 @@
 
 public class ScoreMediator
 {
-	[ViewElement]
-	public ScoreView view;
+    [ViewElement]
+    public ScoreView view;
 
     [Injected]
     public ScoreModel scoreModel;
 
     [ViewOpened]
-	public void OnViewOpened()
-	{
+    public void OnViewOpened()
+    {
         scoreModel.score.onChanged.Add(OnScoreChanged);
     }
 
     [ViewClosed]
-	public void OnViewClosed()
-	{
+    public void OnViewClosed()
+    {
         scoreModel.score.onChanged.Remove(OnScoreChanged);
     }
 

@@ -8,7 +8,7 @@ public class InitEnemySpawnerCommand : ICommand
     public EnemySpawnerSO[] spawners;
 
     public void Execute()
-	{
+    {
         for (int i = 0; i < spawners.Length; ++i)
         {
             EnemySpawnerComponent enemySpawnerComponent = entityDatabase.CreateEntity().AddComponent<EnemySpawnerComponent>(); ;

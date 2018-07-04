@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class GameOverMediator
 {
-	[ViewElement]
-	public GameOverView view;
+    [ViewElement]
+    public GameOverView view;
 
     [Injected]
     public IEventDispatcher eventDispatcher;
@@ -17,15 +17,15 @@ public class GameOverMediator
 
     private float _timer;
 
-	[ViewOpened]
-	public void OnViewOpened()
-	{
+    [ViewOpened]
+    public void OnViewOpened()
+    {
         eventDispatcher.Add(GameEvent.PlayerDead, OnPlayerDead);
     }
 
     [ViewClosed]
-	public void OnViewClosed()
-	{
+    public void OnViewClosed()
+    {
         eventDispatcher.Remove(GameEvent.PlayerDead, OnPlayerDead);
     }
 

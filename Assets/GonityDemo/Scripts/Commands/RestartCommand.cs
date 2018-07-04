@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class RestartCommand : ICommand
 {
-	public void Execute()
-	{
+    public void Execute()
+    {
         SceneManager.LoadScene(0);
     }
 }

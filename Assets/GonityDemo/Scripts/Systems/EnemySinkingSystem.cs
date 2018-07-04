@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class EnemySinkingSystem : ECSSystem, IUpdate
 {
-	public void Update()
-	{
+    public void Update()
+    {
         ListReadOnly<EnemyDeathComponent> enemyDeathComponents = entityDatabase.QueryTypes<EnemyDeathComponent>();
         if (enemyDeathComponents.Count == 0) return;
 
@@ -26,5 +26,5 @@ public class EnemySinkingSystem : ECSSystem, IUpdate
                 entityDatabase.DestroyEntity(entity);
             }
         }
-	}
+    }
 }

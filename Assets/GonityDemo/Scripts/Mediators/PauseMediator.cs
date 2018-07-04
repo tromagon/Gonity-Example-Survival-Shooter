@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PauseMediator
 {
-	[ViewElement]
-	public PauseView view;
+    [ViewElement]
+    public PauseView view;
 
     [Injected]
     public IUpdater updater;
@@ -14,8 +14,8 @@ public class PauseMediator
     public AudioModel audioModel;
 
     [ViewOpened]
-	public void OnViewOpened()
-	{
+    public void OnViewOpened()
+    {
         view.canvas.enabled = false;
 
         view.quitButton.onClick.AddListener(OnQuit);
@@ -26,10 +26,10 @@ public class PauseMediator
 
         updater.RunUpdate(Update);
     }
-	
-	[ViewClosed]
-	public void OnViewClosed()
-	{
+    
+    [ViewClosed]
+    public void OnViewClosed()
+    {
         view.quitButton.onClick.RemoveListener(OnQuit);
         view.resumeButton.onClick.RemoveListener(OnResume);
         view.audioToggle.onValueChanged.RemoveListener(OnAudioToggle);
@@ -52,7 +52,7 @@ public class PauseMediator
 #if UNITY_EDITOR
         EditorApplication.isPlaying = false;
 #else
-		Application.Quit();
+        Application.Quit();
 #endif
     }
 

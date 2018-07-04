@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class DamageMediator
 {
-	[ViewElement]
-	public DamageView view;
+    [ViewElement]
+    public DamageView view;
 
     [Injected]
     public IEventDispatcher eventDispatcher;
@@ -15,17 +15,17 @@ public class DamageMediator
     [Injected]
     public IUpdater updater;
 
-	[ViewOpened]
-	public void OnViewOpened()
-	{
+    [ViewOpened]
+    public void OnViewOpened()
+    {
         eventDispatcher.Add(GameEvent.PlayerDamage, OnPlayerDamage);
 
         updater.RunUpdate(Update);
     }
 
     [ViewClosed]
-	public void OnViewClosed()
-	{
+    public void OnViewClosed()
+    {
         eventDispatcher.Remove(GameEvent.PlayerDamage, OnPlayerDamage);
 
         updater.StopUpdate(Update);

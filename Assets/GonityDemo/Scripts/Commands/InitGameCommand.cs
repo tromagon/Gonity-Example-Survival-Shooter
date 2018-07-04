@@ -12,7 +12,7 @@ public class InitGameCommand : ICommand
     public IGameData gameData;
 
     public void Execute()
-	{
+    {
         Entity rootEntity = entityDatabase.QueryEntity(Tag.Root);
         rootEntity.AddComponent<ScoreComponent>().scoreModel = scoreModel;
         rootEntity.AddComponent<GameDataComponent>().gameData = gameData;

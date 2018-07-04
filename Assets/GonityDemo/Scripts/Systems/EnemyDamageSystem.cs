@@ -2,8 +2,8 @@
 
 public class EnemyDamageSystem : ECSSystem, IUpdate
 {
-	public void Update()
-	{
+    public void Update()
+    {
         ListReadOnly<EnemyDamageComponent> enemyDamageComponent = entityDatabase.QueryTypes<EnemyDamageComponent>();
         if (enemyDamageComponent.Count == 0) return;
 
@@ -27,7 +27,7 @@ public class EnemyDamageSystem : ECSSystem, IUpdate
 
             entity.RemoveComponent<EnemyDamageComponent>();
         }
-	}
+    }
 
     private void Death(EnemyComponent enemyComponent)
     {

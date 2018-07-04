@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class PlayerShootingSystem : ECSSystem, IUpdate
 {
-	public void Update()
-	{
+    public void Update()
+    {
         if (entityDatabase.QueryEntity<PlayerComponent>().HasTag(Tag.Dead)) return;
 
         GunComponent gunComponent = entityDatabase.QueryType<GunComponent>();

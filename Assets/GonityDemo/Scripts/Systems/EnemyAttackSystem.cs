@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class EnemyAttackSystem : ECSSystem, IUpdate
 {
-	public void Update()
-	{
+    public void Update()
+    {
         ListReadOnly<EnemyComponent> enemyComponents = entityDatabase.QueryTypes<EnemyComponent>();
         if (enemyComponents.Count == 0) return;
 
@@ -29,7 +29,7 @@ public class EnemyAttackSystem : ECSSystem, IUpdate
                 enemyComponent.anim.SetTrigger("PlayerDead");
             }
         }
-	}
+    }
 
     private void Attack(EnemyComponent enemyComponent, Entity playerEntity)
     {

@@ -2,8 +2,8 @@
 
 public class HealthMediator
 {
-	[ViewElement]
-	public HealthView view;
+    [ViewElement]
+    public HealthView view;
 
     [Injected]
     public PlayerHealthModel healthModel;

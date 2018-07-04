@@ -5,8 +5,8 @@ public class InitCameraTargetCommand : ICommand
     [Injected]
     public IEntityDatabase entityDatabase;
 
-	public void Execute()
-	{
+    public void Execute()
+    {
         Entity cameraEntity = entityDatabase.QueryEntity<CameraComponent>();
         Entity playerEntity = entityDatabase.QueryEntity<PlayerComponent>();
 

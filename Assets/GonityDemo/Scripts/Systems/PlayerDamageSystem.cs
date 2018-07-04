@@ -2,8 +2,8 @@
 
 public class PlayerDamageSystem : ECSSystem, IUpdate
 {
-	public void Update()
-	{
+    public void Update()
+    {
         PlayerDamageComponent playerDamageComponent = entityDatabase.QueryType<PlayerDamageComponent>();
         if (!playerDamageComponent) return;
 

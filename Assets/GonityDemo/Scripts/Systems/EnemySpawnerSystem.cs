@@ -4,8 +4,8 @@ using UnityEngine.AI;
 
 public class EnemySpawnerSystem : ECSSystem, IUpdate
 {
-	public void Update()
-	{
+    public void Update()
+    {
         ListReadOnly<EnemySpawnerComponent> enemySpawnerComponents = entityDatabase.QueryTypes<EnemySpawnerComponent>();
         var enumerator = enemySpawnerComponents.GetEnumerator();
 
@@ -20,7 +20,7 @@ public class EnemySpawnerSystem : ECSSystem, IUpdate
                 enemySpawnerComponent.timer = enemySpawnerComponent.spawnerData.spawnTime;
             }
         }
-	}
+    }
 
     private void Spawn(EnemySpawnerSO spawnerData)
     {

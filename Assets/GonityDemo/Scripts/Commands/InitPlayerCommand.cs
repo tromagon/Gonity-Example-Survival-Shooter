@@ -14,8 +14,8 @@ public class InitPlayerCommand : ICommand
 
     public GameObject playerGameObject;
 
-	public void Execute()
-	{
+    public void Execute()
+    {
         Entity playerEntity = entityDatabase.CreateEntity();
 
         PlayerComponent playerComponent = playerEntity.AddComponent<PlayerComponent>();

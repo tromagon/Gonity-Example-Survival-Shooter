@@ -11,7 +11,7 @@ public class InitAudioCommand : ICommand
     public AudioMixer masterMixer;
 
     public void Execute()
-	{
+    {
         audioModel.audioListener = camera.GetComponent<AudioListener>();
         audioModel.masterMixer = masterMixer;
     }

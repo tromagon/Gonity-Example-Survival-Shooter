@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class CameraFollowSystem : ECSSystem, IUpdate
 {
-	public void Update()
-	{
+    public void Update()
+    {
         Entity cameraEntity = entityDatabase.QueryEntity<CameraComponent>();
         CameraTargetComponent cameraTargetComponent = cameraEntity.GetComponent<CameraTargetComponent>();
         ICameraData cameraData = entityDatabase.QueryType<GameDataComponent>().gameData.cameraData;

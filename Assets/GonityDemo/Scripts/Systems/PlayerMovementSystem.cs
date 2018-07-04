@@ -4,8 +4,8 @@ using UnitySampleAssets.CrossPlatformInput;
 
 public class PlayerMovementSystem : ECSSystem, IUpdate
 {
-	public void Update()
-	{
+    public void Update()
+    {
         PlayerComponent playerComponent = entityDatabase.QueryType<PlayerComponent>();
         if (playerComponent.entity.HasTag(Tag.Dead)) return;
 

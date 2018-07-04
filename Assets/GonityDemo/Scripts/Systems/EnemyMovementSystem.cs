@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class EnemyMovementSystem : ECSSystem, IUpdate
 {
-	public void Update()
-	{
+    public void Update()
+    {
         ListReadOnly<EnemyComponent> enemyComponents = entityDatabase.QueryTypes<EnemyComponent>();
         if (enemyComponents.Count == 0) return;
 
@@ -26,5 +26,5 @@ public class EnemyMovementSystem : ECSSystem, IUpdate
                 enemyComponent.nav.enabled = false;
             }
         }
-	}
+    }
 }

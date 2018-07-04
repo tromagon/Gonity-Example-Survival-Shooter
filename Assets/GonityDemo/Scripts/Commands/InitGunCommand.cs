@@ -10,7 +10,7 @@ public class InitGunCommand : ICommand
     public Light faceLight;
 
     public void Execute()
-	{
+    {
         Entity gunEntity = entityDatabase.CreateEntity();
 
         GunComponent gunComponent = gunEntity.AddComponent<GunComponent>();

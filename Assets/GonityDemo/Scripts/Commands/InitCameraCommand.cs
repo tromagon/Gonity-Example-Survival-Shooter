@@ -8,8 +8,8 @@ public class InitCameraCommand : ICommand
 
     public Camera camera; 
 
-	public void Execute()
-	{
+    public void Execute()
+    {
         Entity cameraEntity = entityDatabase.CreateEntity();
 
         CameraComponent cameraComponent = cameraEntity.AddComponent<CameraComponent>();

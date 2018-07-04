@@ -8,8 +8,8 @@ public class InitUICommand : ICommand
     [Injected]
     public IMediatorMap mediatorMap;
 
-	public void Execute()
-	{
+    public void Execute()
+    {
         mediatorMap.Open(ViewType.Damage);
         mediatorMap.Open(ViewType.GameOver);
         mediatorMap.Open(ViewType.Health);
