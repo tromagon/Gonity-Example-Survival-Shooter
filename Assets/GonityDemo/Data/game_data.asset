@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3d09752d51ac441bc7e232383bfb9e, type: 3}
+  m_Name: game_data
+  m_EditorClassIdentifier: 
+  timeBeforeRestart: 2
+  cameraData: {fileID: 11400000, guid: 92f641816d90b5e43a2975c24dea0abe, type: 2}
+  enemyData: {fileID: 11400000, guid: 7fc6290320a54b840a277422146dd4db, type: 2}
+  gunData: {fileID: 11400000, guid: a27ae1bc049815e42bb7660b178e862c, type: 2}
+  playerData: {fileID: 11400000, guid: 2b8feafc2ff58674e92317c3fd25cf66, type: 2}
+  viewData: {fileID: 0}

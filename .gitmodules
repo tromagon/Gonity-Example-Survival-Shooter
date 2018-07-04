@@ -1,0 +1,3 @@
+[submodule "Assets/Gonity"]
+	path = Assets/Gonity
+	url = https://github.com/tromagon/Gonity.git
